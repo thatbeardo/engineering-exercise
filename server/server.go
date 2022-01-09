@@ -6,10 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Engine interface {
-}
-
-func SetupRouteHandlers() Engine {
+func SetupRouteHandlers() *gin.Engine {
 	r := gin.Default()
 	inject.SetupHealthcheckRoutes(&r.RouterGroup)
 	return r

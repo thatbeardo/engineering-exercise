@@ -5,5 +5,6 @@ import (
 )
 
 func SetupRoutes(r *gin.RouterGroup) {
-
+	router := r.Group("/healthcheck")
+	router.GET("", get)
 }
